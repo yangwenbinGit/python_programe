@@ -14,16 +14,16 @@ from fabric.api import *
 
 env.user = 'michael'
 env.sudo_user = 'root'
-env.hosts = ['192.168.0.3']
+env.hosts = ['192.168.1.44']
 
-db_user = 'www-data'
-db_password = 'www-data'
+db_user = 'root'
+db_password = 'password'
 
 _TAR_FILE = 'dist-awesome.tar.gz'
 
 _REMOTE_TMP_TAR = '/tmp/%s' % _TAR_FILE
 
-_REMOTE_BASE_DIR = '/srv/awesome'
+_REMOTE_BASE_DIR = '/test'
 
 def _current_path():
     return os.path.abspath('.')
